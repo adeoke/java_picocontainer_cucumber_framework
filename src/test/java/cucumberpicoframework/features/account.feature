@@ -1,5 +1,4 @@
-Feature: Login to the site
-  Some junk
+Feature: Account
 
   Scenario: Create an Account
     And the user initiates the account creation process from the homepage
