@@ -30,3 +30,7 @@ When I ran the test automated or manually adding items to the cart and then logg
 So it was a mystery to me and as such I submitted my response for you to assess as it is.
 
 Thanks.
+
+## License
+
+[MIT License](https://github.com/adeoke/java_picocontainer_cucumber_framework/blob/master/LICENSE)
