@@ -16,7 +16,7 @@ mvn clean test -Dbrowser=CHROME
 
 Which launches the browser with Chrome.
 
-Optiontionally, you can choose to run the tests with the following browsers as well:
+Optionally, you can choose to run the tests with the following browsers as well:
 
 Chrome
 FireFox
