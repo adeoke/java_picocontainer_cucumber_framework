@@ -1,7 +1,7 @@
 Feature: Account
 
-  Scenario: Create an Account
-    And the user initiates the account creation process from the homepage
+  Scenario: Add item to cart, checking that logging out and in again keeps cart items
+    Given the user initiates the account creation process from the homepage
     When the user provides the required account registration details
     Then the user account is registered
     And adds the most expensive item to the cart

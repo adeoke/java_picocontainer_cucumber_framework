@@ -20,6 +20,15 @@ public class LoginPage extends PageHelper {
     @FindBy(className="login")
     public WebElement signIn;
 
+    @FindBy(css = "#email")
+    WebElement emailSignInField;
+
+    @FindBy(css = "#passwd")
+    WebElement password;
+
+    @FindBy(css = "#SubmitLogin")
+    WebElement signInButton;
+
     public LoginPage(WebDriver driver) throws IOException {
         super(driver);
         this.driver = driver;
@@ -27,7 +36,14 @@ public class LoginPage extends PageHelper {
 
     public void createNewAccount(UserAccount account) throws IOException {
         waitForElementVisibility(signIn);
+        System.out.println(String.format(" this is the user I signed up with: '%s'", account.getEmail()));
         typeText(email, account.getEmail());
         createAnAccount.click();
+    }
+
+    public void signInUser(UserAccount userAccount) throws IOException {
+        typeText(emailSignInField, userAccount.getEmail());
+        typeText(password, userAccount.getPassword());
+        signInButton.click();
     }
 }

@@ -8,18 +8,21 @@ import org.openqa.selenium.support.FindBy;
 import java.io.IOException;
 
 public class MyAccount extends PageHelper {
-    private final String title = "My account - My Store";
     WebDriver driver;
 
-    @FindBy(css = "title")
-    WebElement pageTitle;
+    @FindBy(css = "#block_top_menu > ul > li:nth-child(2) > a")
+    WebElement dresses;
 
     public MyAccount(WebDriver driver) throws IOException {
         super(driver);
         this.driver = driver;
     }
 
-    public String getPageTitle() throws InterruptedException {
+    public void clickDresses() {
+        dresses.click();
+    }
+
+    public String getPageTitle() {
         return driver.getTitle();
     }
 }

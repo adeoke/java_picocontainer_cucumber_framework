@@ -1,5 +1,6 @@
 package cucumberpicoframework.steps;
 
+import cucumberpicoframework.data.SortByPrices;
 import cucumberpicoframework.data.UserAccount;
 import cucumberpicoframework.site.Site;
 import cucumberpicoframework.testcontext.World;
@@ -18,6 +19,7 @@ public class AccountSteps {
     WebDriver driver;
     private UserAccount userAccount;
     private Site site;
+    private String addedItemText;
 
     public AccountSteps(World world) throws IOException {
         driver = world.driverInstance();
@@ -42,32 +44,29 @@ public class AccountSteps {
         assertThat(site.myAccountPage().getPageTitle(), is(equalTo(expectedPageTitle)));
     }
 
-    @Given("a user completes the registration process")
-    public void a_user_completes_the_registration_process() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
     @Given("adds the most expensive item to the cart")
     public void adds_the_most_expensive_item_to_the_cart() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        site.myAccountPage().clickDresses();
+
+        site.categoryPage().softDressesBy(SortByPrices.DESCENDING);
+        site.categoryPage().pricesList();
+        addedItemText = site.categoryPage().getAddedItem();
+        site.categoryPage().proceedToCheckout();
     }
+
     @When("the user logs out")
     public void the_user_logs_out() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        site.categoryPage().signOut();
     }
     @When("logs back in again")
-    public void logs_back_in_again() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void logs_back_in_again() throws IOException {
+        site.categoryPage().login();
+        site.loginPage().signInUser(userAccount);
     }
+
     @Then("the dress is still present int he cart")
     public void the_dress_is_still_present_in_the_cart() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-
-
 }

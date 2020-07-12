@@ -1,9 +1,6 @@
 package cucumberpicoframework.site;
 
-import cucumberpicoframework.site.pages.AccountCreationPage;
-import cucumberpicoframework.site.pages.HomePage;
-import cucumberpicoframework.site.pages.LoginPage;
-import cucumberpicoframework.site.pages.MyAccount;
+import cucumberpicoframework.site.pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -32,5 +29,9 @@ public class Site {
 
     public MyAccount myAccountPage() {
         return PageFactory.initElements(getDriver(), MyAccount.class);
+    }
+
+    public CategoryPage categoryPage() {
+        return PageFactory.initElements(getDriver(), CategoryPage.class);
     }
 }

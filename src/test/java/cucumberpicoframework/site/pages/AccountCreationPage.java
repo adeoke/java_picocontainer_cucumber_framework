@@ -71,6 +71,7 @@ public class AccountCreationPage extends PageHelper {
         mrRadioButton.click();
         typeText(firstName, userAccount.getFirstName());
         typeText(customerLastName, userAccount.getLastName());
+        System.out.println(String.format("This isht euser password: '%s'", userAccount.getPassword()));
         typeText(password, userAccount.getPassword());
         selectDay(userAccount.getDayOfBirth());
         selectMonth(userAccount.getMonthOfBirth());

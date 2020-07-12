@@ -14,13 +14,13 @@ public class UserAccount {
     private String lastName = faker.name().lastName();
     private int stateIndex = faker.number().numberBetween(1, 50);
     private String postcode = String.valueOf(faker.number().numberBetween(10000, 99999));
-
+    private String email = faker.internet().safeEmailAddress();
     //maybe dont need this as only one option
     private int countryIndex = faker.number().numberBetween(21, 21);
     private String alias = "alias address";
 
     public String getEmail() {
-        return faker.internet().safeEmailAddress();
+        return email;
     }
 
     public String getAddress() {
