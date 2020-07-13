@@ -2,7 +2,7 @@
 
 * Maven which is greater than 3.3 (I'm using mvn 3.5.2).
 
-* Of course Java, but I've specified Java 11 or greater.
+* Of course Java (I've specified Java 8).
 
 * The browser used to perform the must be installed on your machine.
 
