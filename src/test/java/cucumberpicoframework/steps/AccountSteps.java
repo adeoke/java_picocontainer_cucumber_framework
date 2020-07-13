@@ -58,6 +58,7 @@ public class AccountSteps {
     public void the_user_logs_out() {
         site.categoryPage().signOut();
     }
+
     @When("logs back in again")
     public void logs_back_in_again() throws IOException {
         site.categoryPage().login();
@@ -66,6 +67,7 @@ public class AccountSteps {
 
     @Then("the dress is still present int he cart")
     public void the_dress_is_still_present_in_the_cart() {
+        //compare added item before logging out to the item in the cart.
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
