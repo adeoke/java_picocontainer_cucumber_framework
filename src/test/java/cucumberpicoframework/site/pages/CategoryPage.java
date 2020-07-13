@@ -68,7 +68,6 @@ public class CategoryPage extends PageHelper {
     }
 
     public String getAddedItem() {
-        System.out.println(addedItem.getText());
         return addedItem.getText();
     }
 

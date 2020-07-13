@@ -36,7 +36,6 @@ public class LoginPage extends PageHelper {
 
     public void createNewAccount(UserAccount account) throws IOException {
         waitForElementVisibility(signIn);
-        System.out.println(String.format(" this is the user I signed up with: '%s'", account.getEmail()));
         typeText(email, account.getEmail());
         createAnAccount.click();
     }
