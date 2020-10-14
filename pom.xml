@@ -11,7 +11,6 @@
 
     <properties>
         <cucumber.version>6.2.2</cucumber.version>
-        <junit.version>4.13</junit.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <selenium.chrome.version>3.141.59</selenium.chrome.version>
         <webdrivermanager.version>4.0.0</webdrivermanager.version>
@@ -38,9 +37,8 @@
         </dependency>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
 
