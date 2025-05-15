@@ -13,7 +13,7 @@
         <cucumber.version>6.2.2</cucumber.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <selenium.chrome.version>3.141.59</selenium.chrome.version>
-        <webdrivermanager.version>4.0.0</webdrivermanager.version>
+        <webdrivermanager.version>6.1.0</webdrivermanager.version>
         <slf4j.version>2.7</slf4j.version>
         <slf4j.ignore.version>1.7.30</slf4j.ignore.version>
         <faker.version>0.15</faker.version>
